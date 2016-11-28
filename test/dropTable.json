@@ -1,0 +1,90 @@
+{
+    "code": 1,
+    "data": {
+        "datas":[
+           {
+               "date": "2016-01-01",
+               "area": "华北区域",
+               "city": "bj",
+               "department": "二部",
+               "name": "xxx"
+           },
+           {
+               "date": "2016-01-02",
+               "area": "华北区域",
+               "city": "bj",
+               "department": "二部",
+               "name": "xxx"
+           },
+           {
+               "date": "2016-01-03",
+               "area": "华北区域",
+               "city": "bj",
+               "department": "二部",
+               "name": "xxx"
+           },
+           {
+               "date": "2016-01-03",
+               "area": "华北区域",
+               "city": "bj",
+               "department": "二部",
+               "name": "xxx"
+           },
+           {
+               "date": "2016-01-03",
+               "area": "华北区域",
+               "city": "bj",
+               "department": "二部",
+               "name": "xxx"
+           },
+           {
+               "date": "2016-01-03",
+               "area": "华北区域",
+               "city": "bj",
+               "department": "二部",
+               "name": "xxx"
+           },
+           {
+               "date": "2016-01-03",
+               "area": "华北区域",
+               "city": "bj",
+               "department": "二部",
+               "name": "xxx"
+           },
+           {
+               "date": "2016-01-03",
+               "area": "华北区域",
+               "city": "bj",
+               "department": "二部",
+               "name": "xxx"
+           },
+           {
+               "date": "2016-01-03",
+               "area": "华北区域",
+               "city": "bj",
+               "department": "二部",
+               "name": "xxx"
+           },
+           {
+               "date": "2016-01-03",
+               "area": "华北区域",
+               "city": "bj",
+               "department": "二部",
+               "name": "xxx"
+           },
+           {
+               "date": "2016-01-03",
+               "area": "华北区域",
+               "city": "bj",
+               "department": "二部",
+               "name": "xxx"
+           } 
+        ],
+        "pageSize":1,
+        "currPage":100,
+        "totalSize":100,
+        "totalPage":1
+    },
+
+    "message": "执行成功"
+}

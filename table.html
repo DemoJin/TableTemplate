@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+	<link rel="stylesheet" href="css/tableType.css">
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/echarts/echarts.js"></script>
+	<script type="text/javascript" src="libs/kkpager/kkpager.js"></script>
+	<link rel="stylesheet" type="text/css" href="libs/kkpager/kkpager_blue.css" />
+	<script src="libs/tableType.js"></script>
+</head>
+<body>
+	<div style="height: 300px;background: #ccc;">
+		<ul>
+			<li class="sure">确认</li>
+			<li class="reset">重置</li>
+			<li class="date">2016-11-11</li>
+		</ul>
+	</div>
+	<!-- demo -->
+	<table id="table"></table>
+	
+	<script>
+
+		/****************************************
+		 * 										*
+		 *                                      *
+		 *              通用配置参数            *
+		 *                                      *
+		 *                                      *
+		 * **************************************/
+
+		function tableList(){
+			$('#table').empty();
+			$('.paper').remove();
+
+			var conditionArr = [0,0,0,0,1];//筛选参数
+			var colModel = [
+				{
+					name:'id',
+					hide:1
+				},{
+					name:'area',
+					hide:conditionArr[0]
+				},{
+					name:'region',
+					hide:conditionArr[1]
+				},{
+					name:'city',
+					hide:conditionArr[2]
+				},{
+					name:'department',
+					hide:conditionArr[3]
+				},{
+					name:'name',
+					hide:conditionArr[4]
+				},{
+					name:'user'
+				},{
+					name:'amount'
+				},{
+					name:'assessmentTask'
+				},{
+					name:'targetTask'
+				},{
+					name:'completionRate'
+				}
+			];
+			var dropColModel = [
+				{
+					name:'date'
+				},{
+					name:'area'
+				},{
+					name:'city'
+				},{
+					name:'department'
+				},{
+					name:'name',
+					hide:1
+				}
+			];
+			var theadModel = [
+				{
+					value:'大区',
+					hide:conditionArr[0]
+				},
+				{
+					value:'区域',
+					hide:conditionArr[1]
+				},
+				{
+					value:'直销城市',
+					hide:conditionArr[2]
+				},
+				{
+					value:'末级部门',
+					hide:conditionArr[3]
+				},
+				{
+					value:'销售姓名',
+					hide:conditionArr[4]
+				},
+				{
+					value:'OA用户名'
+				},
+				{
+					value:'月度累计金额',
+					title:'文字描述文字描述'
+				},
+				{
+					value:'本月考核任务'
+				},
+				{
+					value:'本月目标任务'
+				},
+				{
+					value:'完成率'
+				}
+			],
+			dorpTheadModel = [
+				{
+					value:'日期'
+				},
+				{
+					value:'区域'
+				},
+				{
+					value:'城市'
+				},
+				{
+					value:'末级部门'
+				},
+				{
+					value:'销售姓名',
+					hide:1
+				}
+			],
+			requestData = {
+				type:'init_table',
+				pageSize:1,
+				totalSize: 20
+			},
+		 	requestChartData ={
+				type:'init_chart',
+				timebar:'day'
+			},
+			downLoadStr = '&type='+'download'
+                    	+ '&st='+'2016-11-11';
+
+			var tableModern = new tableType({
+			    parent: '#table',//明细表id
+			    urlStart:'',
+			    url : 'test/tableType.json',//明细表url
+			    dropUrl : 'test/dropTable.json',//明细表下钻url
+			    chartUrl : 'test/dropChart.json',//趋势图url
+			    downLoadUrl : 'test/downLoadUrl.json',//导出url
+			    dropDownLoadUrl : 'test/dropDownLoadUrl.json',//趋势图导出url
+			    requestData : requestData,//明细表参数
+			    requestChartData : requestChartData,//趋势图参数
+			    downLoadStr : downLoadStr,//导出参数
+			    thead : theadModel,
+			    colModel : colModel,
+			    dorpThead : dorpTheadModel,
+			    dropColModel:dropColModel,
+			    linkName : 'department',//下钻name
+			    operationBtn : true,//是否显示操作
+			    timebar : true//是否显示操作
+			});
+		};
+
+		tableList();
+
+		$('ul li').click(function(){
+			if ($(this).hasClass('sure')) {
+				console.log('确认');
+				tableList();
+			}else if ($(this).hasClass('date')) {
+				console.log('日期');
+				tableList();
+			}{
+				console.log('重置');
+				$('#table').empty();
+				$('.paper').remove();
+			};
+		});
+	</script>
+</body>
+</html>

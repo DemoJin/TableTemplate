@@ -1,0 +1,66 @@
+/**************************************** 										* * tableType.css            * * * **************************************/
+body, html, div, span, h1, h2, h3, h4, h5, h6, mark, ul, li, dl, dt, dd, table, tr, th, td, em, p, b, a { background: none; border: 0; font-size: 14px; font-style: inherit; font-weight: inherit; list-style: none; margin: 0; padding: 0; outline: 0; }
+
+ul, li { list-style: none; }
+
+a, a:active { text-decoration: none; }
+
+select, button, input, a, textarea { border: 0; border-radius: 0; outline: none; resize: none; cursor: pointer; background: none; -webkit-touch-callout: none; }
+
+.loading { width: 60px; height: 60px; background: url(../img/loading.gif) no-repeat; background-size: cover; margin: 10px auto; }
+
+table { width: 100%; margin: 0 auto; }
+
+.tableType { border-collapse: collapse; border: 1px solid #ebebeb; width: 100%; margin: 10px auto; background: #fff; }
+.tableType th, .tableType td { border: 1px solid #ebebeb; line-height: 36px; min-width: 40px; text-align: center; position: relative; }
+.tableType .bg_gray { background: #E9E9E9 !important; color: #333 !important; }
+.tableType .bg_active { background: #f9f9f9; }
+.tableType th i { width: 17px; height: 17px; font-size: 12px; margin-left: 5px; background: #a0a0a0; display: inline-block; cursor: pointer; line-height: 16px; text-align: center; color: #ffffff; box-sizing: border-box; border: 1px solid #d5d7d9; border-radius: 15px; font-style: normal; }
+.tableType tr:hover { background: #f9f9f9; }
+.tableType span { border: 1px solid #ebebeb; display: inline-block; }
+.tableType .table_title { line-height: 42px; position: relative; padding: 0 10px; text-align: left; background: #f9f9f9; border: 1px solid #ebebeb; border-bottom: 0; border-radius: 7px 7px 0 0; font-size: 16px; }
+.tableType .table_title > button { position: absolute; right: 10px !important; top: 8px !important; }
+.tableType .table_title .export_card { top: 6px !important; right: 90px !important; }
+.tableType .table_timebar { position: absolute; right: 130px; top: 15px; border: 1px solid #E9E9E9; border-radius: 7px; line-height: 29px; }
+.tableType .table_timebar em { padding: 0 20px; line-height: 24px; display: inline-block; font-size: 12px; text-align: center; box-sizing: border-box; margin: 0 8px; border-radius: 5px; cursor: pointer; background: #E9E9E9; color: #333; }
+.tableType .table_timebar em.active { background: #3284a7; color: #fff; }
+.tableType .closeTd { position: absolute; right: 2px; top: 2px; border-radius: 50%; width: 20px; height: 20px; line-height: 20px; cursor: pointer; color: #fff; background: #a0a0a0; }
+.tableType .underline { color: #3398DB; cursor: pointer; }
+.tableType .underline:hover { text-decoration: underline; }
+.tableType .operation_btn { cursor: pointer; display: inline-block; height: 21px; width: 25px; border: 0; z-index: 2; cursor: pointer; background: url(../img/link.png) no-repeat 0 0; position: relative; top: 5px; }
+.tableType .operation_btn:hover { opacity: .8; text-decoration: underline; background-position: 0 -42px !important; }
+.tableType .dropTable { padding: 10px; max-height: 400px; overflow: auto; background: #fff; }
+.tableType .dropTable > table { border-collapse: collapse; border: 1px solid black; width: 100%; }
+.tableType .dropChart { border: 1px solid #ccc; margin: 10px; height: 400px; background: #fff !important; border-radius: 7px; }
+.tableType .export_card_btn { position: absolute; right: 50px; top: 18px; padding: 0 20px; line-height: 24px; display: inline-block; font-size: 12px; text-align: center; border: 1px solid #ebebeb; box-sizing: border-box; margin-left: 15px; border-radius: 5px; cursor: pointer; background: #3284a7; color: #fff; }
+
+.export_card { position: absolute; width: 300px; height: auto; top: 15px; right: 130px; z-index: 2; padding: 0 10px; background: #fff; box-shadow: 0 0 2px 0 #ccc; border-radius: 5px; }
+.export_card:before { content: ''; border-left: 10px solid #fff; border-right: 10px solid transparent; border-bottom: 10px solid transparent; border-top: 10px solid transparent; position: absolute; right: -20px; top: 4px; z-index: 3; }
+.export_card:after { content: ''; border-left: 10px solid #ececec; border-right: 10px solid transparent; border-bottom: 10px solid transparent; border-top: 10px solid transparent; position: absolute; right: -21px; top: 4px; z-index: 2; }
+.export_card label { padding: 15px 0 0; display: block; }
+.export_card label input { border-radius: 4px; border: 1px solid #e5e5e5; line-height: 24px; text-indent: 4px; width: 240px; font-size: 12px; margin-left: 6px; }
+.export_card label b { font-size: 12px; font-weight: 400; display: block; margin-left: 50px; line-height: 26px; text-align: left; }
+.export_card .btn_group { position: relative; text-align: center; display: block; overflow: hidden; }
+.export_card .btn_group button { display: inline-block; color: white; background: #3284a7; border: 0; margin: 0 12px; padding: 0 30px; border-radius: 4px; font-size: 12px; line-height: 24px; height: 24px; text-indent: 0; cursor: pointer; }
+.export_card .share_radio { text-align: center; }
+.export_card .share_radio input { width: auto !important; }
+.export_card .share_radio label { width: 45%; display: inline-block; text-align: center; padding: 0; font-size: 14px; cursor: pointer; }
+.export_card ul { display: none; padding-left: 42px; }
+.export_card ul em { position: absolute; left: 10px; }
+.export_card ul li { display: inline-block; }
+.export_card ul li input { width: 200px; border: 1px solid #e5e5e5; border-radius: 4px; text-indent: 4px; line-height: 24px; margin: 0 6px; }
+.export_card ul li i { background: #3284a7; border: 0; width: 30px; text-align: center; line-height: 24px; display: inline-block; color: #fff; border-radius: 7px; font-weight: 600; font-style: normal; cursor: pointer; }
+
+#kkpager { text-align: right !important; margin: 10px auto !important; vertical-align: middle !important; }
+
+.paper { text-align: center; margin: 10px auto 30px; }
+.paper .paper_val { width: 100px; }
+.paper .paper_num { display: inline-block; margin-right: 10px; vertical-align: middle; }
+.paper .paper_num em { border-radius: 4px; border: 0; margin: 0 2px; text-align: center; background: none; font-style: normal; }
+.paper .paper_select { width: 125px; height: 24px; line-height: 24px; text-align: left; position: relative; cursor: pointer; display: inline-block; margin-right: 10px; vertical-align: middle; }
+.paper .paper_select ul { position: absolute; right: 0; top: 0; text-align: center; }
+.paper .paper_select ul li { background: #fff; position: relative; z-index: 10; display: none; cursor: pointer; width: 50px; }
+.paper .paper_select ul li:hover { background: #ebebeb; }
+.paper .paper_select span { width: 50px; height: 22px; line-height: 22px; display: block; border: 1px solid #e4e4e4; background: #fff; border-radius: 3px; }
+
+/*# sourceMappingURL=tableType.css.map */
